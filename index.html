@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <main class="container mx-auto my-auto h-screen">
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        <div class="col-span-2 p-5">
+          <div class="cart flex justify-between">
+            <h2 class="text-xl font-bold">Shoping Cart</h2>
+            <h3 class="text-xl font-bold">3 Items</h3>
+          </div>
+          <hr class="border-black-300 text-center text-2xl mt-8" />
+          <div>
+            <div class="flex justify-between items-center mt-6 pt-6">
+              <div class="flex items-center">
+                <img
+                  src="https://admin.regalfurniturebd.com/storage/uploads/fullsize/2020-12/csm-220-web-1.jpg"
+                  width="60"
+                  class="rounded-full"
+                />
+                <div class="flex flex-col ml-3">
+                  <span class="md:text-md font-medium">Product -1</span>
+                  <span class="text-xs font-light text-gray-400">#41551</span>
+                  <span class="text-sm font-light text-orange-400"
+                    >Categories-1</span
+                  >
+                </div>
+              </div>
+              <div class="flex justify-center items-center">
+                <div class="pr-8 flex">
+                  <span class="font-semibold">-</span>
+                  <input
+                    type="text"
+                    class="focus:outline-none bg-gray-100 border h-6 w-8 rounded text-sm px-2 mx-2"
+                    value="1"
+                  />
+                  <span class="font-semibold">+</span>
+                </div>
+                <div class="pr-8">
+                  <span class="text-xs font-medium">$10.50</span>
+                </div>
+                <div><i class="fa fa-close text-xs font-medium"></i></div>
+              </div>
+            </div>
+            <div class="flex justify-between items-center pt-6 mt-6 border-t">
+              <div class="flex items-center">
+                <img
+                  src="https://admin.regalfurniturebd.com/storage/uploads/fullsize/2019-05/cfv-220-7-1-66.jpg"
+                  width="60"
+                  class="rounded-full"
+                />
+                <div class="flex flex-col ml-3">
+                  <span class="text-md font-medium w-auto">Product -2</span>
+                  <span class="text-xs font-light text-gray-400">#66999</span>
+                  <span class="text-sm font-light text-orange-400"
+                    >Categories-2</span
+                  >
+                </div>
+              </div>
+              <div class="flex justify-center items-center">
+                <div class="pr-8 flex">
+                  <span class="font-semibold">-</span>
+                  <input
+                    type="text"
+                    class="focus:outline-none bg-gray-100 border h-6 w-8 rounded text-sm px-2 mx-2"
+                    value="1"
+                  />
+                  <span class="font-semibold">+</span>
+                </div>
+                <div class="pr-8">
+                  <span class="text-xs font-medium">$10.50</span>
+                </div>
+                <div><i class="fa fa-close text-xs font-medium"></i></div>
+              </div>
+            </div>
+            <div class="flex justify-between items-center mt-6 pt-6 border-t">
+              <div class="flex items-center">
+                <img
+                  src="https://admin.regalfurniturebd.com/storage/uploads/fullsize/2021-03/cfc-204.jpg"
+                  width="60"
+                  class="rounded-full"
+                />
+                <div class="flex flex-col ml-3">
+                  <span class="text-md font-medium">Product -3</span>
+                  <span class="text-xs font-light text-gray-400">#86577</span>
+                  <span class="text-sm font-light text-orange-400"
+                    >Categories-3</span
+                  >
+                </div>
+              </div>
+              <div class="flex justify-center items-center">
+                <div class="pr-8 flex">
+                  <span class="font-semibold">-</span>
+                  <input
+                    type="text"
+                    class="focus:outline-none bg-gray-100 border h-6 w-8 rounded text-sm px-2 mx-2"
+                    value="1"
+                  />
+                  <span class="font-semibold">+</span>
+                </div>
+                <div class="pr-8">
+                  <span class="text-xs font-medium">$10.50</span>
+                </div>
+                <div><i class="fa fa-close text-xs font-medium"></i></div>
+              </div>
+            </div>
+            <div class="flex justify-between items-center mt-6 pt-6 border-t">
+              <div class="flex items-center">
+                <i class="fa fa-arrow-left text-sm pr-2 text-blue-500"></i>
+                <span class="text-md font-medium text-blue-500"
+                  >Continue Shopping</span
+                >
+              </div>
+              <div class="flex justify-center items-center">
+                <span class="text-sm font-medium text-gray-400 mr-1"
+                  >Subtotal:</span
+                >
+                <span class="text-lg font-bold text-gray-800"> $24.90</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-100 p-5 col-span-2 sm:col-span-1">
+          <div class="checkout">
+            <h2 class="text-xl font-bold">Order Summary</h2>
+            <hr class="border-black-300 text-center text-2xl mt-8" />
+            <div class="flex justify-between mt-5 uppercase font-semibold">
+              <span>Items 3</span>
+              <span>$24.90</span>
+            </div>
+            <div class="mt-5">
+              <span class="text-md font-medium uppercase">Shipping</span>
+              <div class="mt-2">
+                <div class="dropdown inline-block relative w-full">
+                  <button
+                    class="bg-gray-300 text-gray-700 p-2 w-full rounded inline-flex items-center justify-between"
+                  >
+                    <span class="mr-1">Select delivery</span>
+                    <svg
+                      class="fill-current h-4 w-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                      />
+                    </svg>
+                  </button>
+                  <ul class="dropdown-menu hidden text-gray-700 pt-1 w-full">
+                    <li class="">
+                      <a
+                        class="rounded-t bg-gray-200 hover:text-white hover:bg-gray-600 py-2 px-4 block whitespace-no-wrap"
+                        href="#"
+                        >Cash On Delivery</a
+                      >
+                    </li>
+                    <li class="">
+                      <a
+                        class="rounded-b bg-gray-200 hover:text-white hover:bg-gray-600 py-2 px-4 block whitespace-no-wrap"
+                        href="#"
+                        >Pre Payment</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="my-5 items-star">
+              <span class="uppercase text-md font-medium">Promo code</span>
+              <input
+                type="text"
+                class="p-2 w-full mt-2 bg-gray-300 rounded"
+                placeholder="Enter your code"
+              />
+              <button class="py-2 px-6 bg-orange-400 text-white rounded mt-3">
+                Apply
+              </button>
+            </div>
+            <hr class="border-black-300 text-center text-2xl mt-8" />
+            <div class="flex justify-between mt-3 font-semibold">
+              <span class="uppercase">Total cost</span>
+              <span>$24.90</span>
+            </div>
+            <button
+              class="uppercase font-medium py-2 w-full bg-blue-500 text-white rounded mt-8"
+            >
+              checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
